@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # 得到最外层的allauthdemo路径
@@ -29,9 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +47,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.weibo',
     'allauth.socialaccount.providers.weixin',
     'allauth.socialaccount.providers.baidu',
+    'bookapp',
+    'articles',
+    'taggit',
+    'markdownx'
 ]
 
 SITE_ID = 1
@@ -80,7 +83,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -100,6 +103,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
+                # 'django.core.context_processors.media',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -161,6 +166,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -174,3 +182,58 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+# 要上唇的路径会和在models中写的上传的路径进行拼接形成最终文件上传的路径
+MEDIA_ROOT = 'media/img/'
+
+# 映射,在前端使用media_url当你的media_root发生改变的时候不用去更改前端模板中的内容
+MEDIA_URL = 'media/'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760 # 单位为字节数， 此处配置的值为10M
+
+
+# markdownx options
+MARKDOWNX_EDITOR_RESIZABLE = False
+
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+
+    'markdown.extensions.extra',
+
+    'markdown.extensions.nl2br',
+
+    'markdown.extensions.codehilite',
+
+]
+
+MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdown/upload/%Y/%m/%d')
+
+MARKDOWNX_UPLOAD_MAX_SIZE = 4 * 1024 * 1024
+
+MARKDOWNX_UPLOAD_CONTENT_TYPES = ['image/jpeg', 'image/png', 'image/svg+xml']
+
+MARKDOWNX_IMAGE_MAX_SIZE = {
+
+    'size': (800, 500),
+
+    'quality': 90
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

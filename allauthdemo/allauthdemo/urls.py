@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from allauthdemo import settings
+from django.views.static import serve
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('accounts/', include('allauth.urls')),
-    url('^', include('app01.urls')),
+    url(r'media/(?P<path>.*)',serve, {'document_root':settings.MEDIA_ROOT} ),
+    url('^app01/', include('app01.urls')),
+    url('^book/', include('bookapp.urls')),
+    url('^articles/', include('articles.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
 ]

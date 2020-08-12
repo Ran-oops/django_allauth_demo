@@ -1,0 +1,15 @@
+
+
+TEST_MEDIAURL:  {{ MEDIA_URL }}
+跳转一下:<a href="{{ MEDIA_URL }}one.jpg">  new url </a>
+<form method="post" action="forimg/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+    name: <input type="text" name="name" /><br>
+    image: <input type="file" name="im_f" /><br>
+
+    <button class="grey">Submit</button>
+
+
+
+</form>
