@@ -1,4 +1,13 @@
+# from markdownx import forms
+from django import forms
 from markdownx.fields import MarkdownxFormField
 
-class MyForm(forms.Form):
+from articles.models import TestImage
+
+
+class TestImageForm(forms.ModelForm):
     myfield = MarkdownxFormField()
+
+    class Meta:
+        fields = ['title', 'myfield', 'image', 'tags']
+        model = TestImage

@@ -50,7 +50,9 @@ INSTALLED_APPS = [
     'bookapp',
     'articles',
     'taggit',
-    'markdownx'
+    'markdownx',
+    'markdown_deux',
+    'django.forms'
 ]
 
 SITE_ID = 1
@@ -205,7 +207,7 @@ MARKDOWNX_MARKDOWN_EXTENSIONS = [
 
 ]
 
-MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdown/upload/%Y/%m/%d')
+MARKDOWNX_MEDIA_PATH = datetime.datetime.now().strftime('markdown/upload/%Y/%m/%d')
 
 MARKDOWNX_UPLOAD_MAX_SIZE = 4 * 1024 * 1024
 
@@ -218,7 +220,7 @@ MARKDOWNX_IMAGE_MAX_SIZE = {
     'quality': 90
 
 }
-
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 
 

@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 import django.utils.timezone as timezone
 # from django.utils.timezone.now()
+from markdownx.utils import markdownify
 from taggit.managers import TaggableManager
 from markdownx.models import MarkdownxField
 # Create your models here.
@@ -40,3 +41,9 @@ class TestImage(models.Model):
     class Meta:
         db_table='ImageStore'
 
+    # def __str__(self):
+    #     return self.myfield
+
+    def get_markdown(self):
+        '''markdown->html'''
+        return markdownify(self.myfield)

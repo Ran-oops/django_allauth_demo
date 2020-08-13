@@ -1,7 +1,7 @@
 from django.contrib import admin
 from markdownx.admin import MarkdownxModelAdmin
-from .models import MyModel
+from .models import TestImage
 
-admin.site.register(MyModel, MarkdownxModelAdmin)
+admin.site.register(TestImage, MarkdownxModelAdmin)
 
 # Register your models here.

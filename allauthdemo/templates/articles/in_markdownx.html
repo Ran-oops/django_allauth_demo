@@ -1,0 +1,13 @@
+<form action="{% url 'articles:get_markdown_content' %}" method="POST" class="form">{% csrf_token %}
+  <div class="form-group">
+      <label for="receiver_id">Receiver ID</label>
+      <input type="text" class="form-control" name="receiver_id" id="receiver_id">
+      {% bootstrap_form form %}
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+  <a class="btn btn-outline-primary" href="javascript:history.go(-1)">Go Back</a>
+</form>{{ form.media }}
+
+<h5>Content:</h5>
+
+<div>{{ message.text | custom_markdown }}</div>

@@ -25,5 +25,5 @@ urlpatterns = [
     url('^app01/', include('app01.urls')),
     url('^book/', include('bookapp.urls')),
     url('^articles/', include('articles.urls')),
-    url(r'^markdownx/', include('markdownx.urls')),
+
 ]

@@ -5,6 +5,7 @@ from django.views.generic import View,TemplateView
 from . import views
 from . import models
 from django.views.generic import ListView
+import markdown
 from django.core.files.base import ContentFile
 
 from django.core.files.images import ImageFile
@@ -66,9 +67,6 @@ class GetImage(View):
     def http_method_not_allowed(self, request, *args, **kwargs):
         return HttpResponse('你使用的是%s请求，但是不支持POST以外的其他请求！'%request.method)
 
-
-
-
 class NewArticleListView(ListView):
     model = models.NewArticle
     template_name = '/articles/article_list.html'
@@ -107,31 +105,57 @@ class NewArticleListView(ListView):
     #
     #     return context
 
+# 使用markdown包
+def showmarkdown(request):
+    text = '''
+#this is title
+##this is subtitle
+**TALK IS CHEAP, SHOW ME YOUR CODE**
+```python
+content = cursor.fetchall()
+conn.close()
+return content
+```'''
+    html = markdown.markdown(text,
+                             extensions = [
+                                 # 包含 缩写、表格等常用扩展
+                                'markdown.extensions.extra',
+                                # 语法高亮扩展
+                                'markdown.extensions.codehilite',
+                                #toc是目录
+                                'markdown.extensions.toc',
+                             ])
 
-# def getimage(request, data):
-#     print('1111111111111')
-#     print('request', request)
-#     if request.method == 'POST':
-#         file_content = ContentFile(request.FILES['img'].read())
-#         print('file_content', file_content)
-#         img = models.TestImage(name=request.FILES['img'].name, img = request.FILES['img'])
-#         print('img', img)
-#         img.save()
-# class GetImage(View):
-#
-#     def post(self, request, *args, **kwargs):
-#         print('1111111111111')
-#         print('request', request)
-#         file_content = ContentFile(request.FILES['img'].read())
-#         print('file_content', file_content)
-#         img = models.TestImage(name=request.FILES['img'].name, img=request.FILES['img'])
-#         print('img', img)
-#         img.save()
+    print('html',html, type(html))
+    return render(request, 'articles/showmarkdown.html', {'html': html})
 
+# 使用django-markdown-deux实现  语法没有高亮
+def showmarkdown2(request):
+    text = '''
+[TOC] 目录：
+#markdown2
+##second list
+###markdown is ok?
+**关关雎鸠，在河之洲。窈窕淑女，君子好逑。**
 
+参差荇菜，左右流之。窈窕淑女，寤寐求之。
 
+---
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
 
+```python
+content=cursor.fetchall()
+conn.close()
+return content
+```'''
 
+    return render(request,"articles/showmarkdown2.html",{"content":text})
+
+def send_message(request):
+    return render(request, 'articles/in_markdownx.html')
 
 
 
