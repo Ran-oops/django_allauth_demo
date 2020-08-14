@@ -25,5 +25,9 @@ urlpatterns = [
     url('^app01/', include('app01.urls')),
     url('^book/', include('bookapp.urls')),
     url('^articles/', include('articles.urls')),
+    url('^formdemo/', include('formdemoapp.urls')),
+    url('^formdemoapp2/', include('formdemoapp2.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
+    url(r'^static/(?P<path>.*)', serve, {'document_root':settings.STATIC_ROOT}),
 
 ]

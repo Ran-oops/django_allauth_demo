@@ -9,5 +9,5 @@ class TestImageForm(forms.ModelForm):
     myfield = MarkdownxFormField()
 
     class Meta:
-        fields = ['title', 'myfield', 'image', 'tags']
+        fields = ['name', 'myfield']
         model = TestImage
