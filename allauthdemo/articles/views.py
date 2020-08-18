@@ -9,6 +9,7 @@ import markdown
 from django.core.files.base import ContentFile
 
 from django.core.files.images import ImageFile
+from articles.forms import TestImageForm
 
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
@@ -157,7 +158,10 @@ return content
 def send_message(request):
     return render(request, 'articles/in_markdownx.html')
 
-
+def createmarkdownpa(request):
+    form = TestImageForm()
+    # return render(request,"articles/createmarkdownpa.html", {'form':form})
+    return render(request,"markdownx/widget2.html", {'form':form})
 
 
 

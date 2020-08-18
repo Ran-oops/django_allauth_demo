@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form role="form" method="POST" action="{%  url 'testmarkdownxapp:form_view' %}" novalidate>{% csrf_token %}
+    {{ form }}
+    <button type="submit" value="提交">提交</button>
+</form>
+    {{ form.media }}
+    <a>you are beautiful!</a>
+{% endblock %}

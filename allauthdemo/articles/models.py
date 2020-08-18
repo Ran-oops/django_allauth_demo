@@ -5,6 +5,7 @@ import django.utils.timezone as timezone
 from markdownx.utils import markdownify
 from taggit.managers import TaggableManager
 from markdownx.models import MarkdownxField
+# from markdown.util import markdownify
 # Create your models here.
 class NewArticle(models.Model):
     STATUS = (

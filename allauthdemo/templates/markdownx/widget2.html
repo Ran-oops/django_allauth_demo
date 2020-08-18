@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+{#{% crispy example_form example_form.helper %}#}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +31,13 @@
         </div>
     </div>
 </div>
-    <form action="{% url 'articles:write_new' %}" enctype="multipart/form-data" id="article-form" method="post" role="form">
+    <form action="" enctype="multipart/form-data" id="article-form" method="post" role="form">
         {% csrf_token %}
-        {{ form|crispy }}
+        {{ form }}
         <div class="form-group">
             <button type="button" class="btn btn-primary publish">发表</button>
             <button type="button" class="btn btn-default draft">保存草稿</button>
-            <a class="btn btn-light" style="float:right" href="{% url 'articles:list' %}">取消</a>
+            <a class="btn btn-light" style="float:right" href="">取消</a>
         </div>
     </form>
     {{ form.media }}

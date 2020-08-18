@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+</head>
+<body>
+    <a href="/learnformapp/add_user/">添加</a>
+    <ul>
+        {% for one in user_list %}
+            <li>{{ one.id }}--{{ one.username }}--{{ one.email }}  <a href="/learnformapp/edit_user/{{ one.id }}">编辑</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -54,7 +54,10 @@ INSTALLED_APPS = [
     'markdown_deux',
     'django.forms',
     'formdemoapp',
-    'formdemoapp2'
+    'formdemoapp2',
+    'learnformapp',
+    'crispy_forms',
+    'testmarkdownxapp'
 ]
 
 SITE_ID = 1
@@ -224,6 +227,7 @@ MARKDOWNX_IMAGE_MAX_SIZE = {
     'quality': 90
 
 }
+# 更改查找组件模板的顺序， 先自定义的模板，然后是系统默认的模板
 FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 

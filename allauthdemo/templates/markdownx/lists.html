@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lists</title>
+</head>
+<body>
+    {% for article in articles %}
+        <p>{{ article.get_markdown|safe }}</p>
+{#        <p>{</p>#}
+    {% endfor %}
+</body>
+</html>

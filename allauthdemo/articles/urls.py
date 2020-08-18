@@ -7,6 +7,7 @@ urlpatterns = [
     url('^index', views.index, name='index'),
     # url('^showmark', views.showmarkdown, name='showmarkdown'),
     url('^showmark2', views.showmarkdown2, name='showmarkdown2'),
+    url('^cmp', views.createmarkdownpa, name='createmarkdownpa'),
     url('^new', views.NewArticleListView.as_view()),
     url('^forimg', views.GetImage.as_view(), name='GetImage_f'),
 
