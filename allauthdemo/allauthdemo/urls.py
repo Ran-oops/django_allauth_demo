@@ -21,6 +21,7 @@ from django.views.static import serve
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('accounts/', include('allauth.urls')),
+    url('chat/', include('tutorial_channelapp1.urls')),
     url(r'media/(?P<path>.*)',serve, {'document_root':settings.MEDIA_ROOT} ),
     url('^app01/', include('app01.urls')),
     url('^book/', include('bookapp.urls')),

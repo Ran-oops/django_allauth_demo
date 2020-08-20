@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'formdemoapp2',
     'learnformapp',
     'crispy_forms',
-    'testmarkdownxapp'
+    'testmarkdownxapp',
+    'tutorial_channelapp1'
 ]
 
 SITE_ID = 1
