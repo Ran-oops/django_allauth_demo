@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'articles',
     'taggit',
     'markdownx',
+    'channels',
     'markdown_deux',
     'django.forms',
     'formdemoapp',
@@ -58,11 +59,19 @@ INSTALLED_APPS = [
     'learnformapp',
     'crispy_forms',
     'testmarkdownxapp',
-    'tutorial_channelapp1'
+    'tutorial_channelapp1',
 ]
 
 SITE_ID = 1
-
+ASGI_APPLICATION = 'allauthdemo.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
