@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from allauthdemo import settings
 from django.views.static import serve
+from haystackdemoapp import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
@@ -32,6 +33,8 @@ urlpatterns = [
     url('^learnformapp/', include('learnformapp.urls')),
     url(r'^markdownx/', include('markdownx.urls')),
     url(r'^testmarkdownxapp/', include('testmarkdownxapp.urls')),
+    url(r'^comments/', include("django_comments.urls")),
     url(r'^static/(?P<path>.*)', serve, {'document_root':settings.STATIC_ROOT}),
-
+    url(r'^search/', include('haystack.urls')),
+    url(r'^add_data/', views.add_data, name='add_data'),
 ]

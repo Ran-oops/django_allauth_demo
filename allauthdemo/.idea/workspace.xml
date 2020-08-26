@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95ec837c-d1bc-448d-99d9-46e37e77fa33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/allauthdemo/routing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tutorial_channelapp2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tutorial_channelapp2/room.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/consumers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/routing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp2/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp3/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp3/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp3/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial_channelapp3/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commentsdemoapp/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/search_indexes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/haystackdemoapp/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search/indexes/haystackdemoapp/note_text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allauthdemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/allauthdemo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allauthdemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/allauthdemo/urls.py" afterDir="false" />
@@ -61,7 +62,11 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="allauth" type="feb32156:DbDataSourceImpl" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -73,8 +78,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -103,20 +108,20 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/tutorial_channelapp2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\templates\socialaccount\book" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\templates\tutorial_channelapp2" />
       <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\tutorial_channelapp2" />
       <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\tutorial_channelapp1" />
       <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\testmarkdownxapp" />
       <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\93623\Desktop\django_allauth_demo\allauthdemo\templates\socialaccount\book" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -243,7 +248,9 @@
       <workItem from="1597053687902" duration="101986000" />
       <workItem from="1597827004065" duration="6834000" />
       <workItem from="1597915363964" duration="3257000" />
-      <workItem from="1597918866095" duration="9215000" />
+      <workItem from="1597918866095" duration="12699000" />
+      <workItem from="1598233624091" duration="8862000" />
+      <workItem from="1598346963227" duration="9872000" />
     </task>
     <servers />
   </component>

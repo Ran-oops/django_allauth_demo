@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app01',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -47,7 +46,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.weibo',
     'allauth.socialaccount.providers.weixin',
     'allauth.socialaccount.providers.baidu',
+    'haystack',
     'bookapp',
+    'app01',
     'articles',
     'taggit',
     'markdownx',
@@ -60,6 +61,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'testmarkdownxapp',
     'tutorial_channelapp1',
+    'django_comments',
+    'haystackdemoapp',
+    'commentsdemoapp',
 ]
 
 SITE_ID = 1
@@ -241,8 +245,17 @@ MARKDOWNX_IMAGE_MAX_SIZE = {
 FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 
-
-
+# haystack-elasticsearch配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
+        'URL': 'http://47.103.123.167:9200/',
+        # 默认的索引名
+        'INDEX_NAME': 'haystack',
+    },
+}
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 
 
