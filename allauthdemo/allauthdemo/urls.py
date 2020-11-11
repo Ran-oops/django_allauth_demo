@@ -37,4 +37,5 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)', serve, {'document_root':settings.STATIC_ROOT}),
     url(r'^search/', include('haystack.urls')),
     url(r'^add_data/', views.add_data, name='add_data'),
+    url(r'^comments/', include('django_comments.urls')),
 ]

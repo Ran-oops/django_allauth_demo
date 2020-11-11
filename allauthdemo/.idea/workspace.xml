@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95ec837c-d1bc-448d-99d9-46e37e77fa33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commentsdemoapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/search_indexes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haystackdemoapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/search/indexes/haystackdemoapp/note_text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/search/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allauthdemo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/allauthdemo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allauthdemo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/allauthdemo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/articles/showmarkdown2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/articles/showmarkdown2.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +231,20 @@
       <workItem from="1597915363964" duration="3257000" />
       <workItem from="1597918866095" duration="12699000" />
       <workItem from="1598233624091" duration="8862000" />
-      <workItem from="1598346963227" duration="9872000" />
+      <workItem from="1598346963227" duration="31617000" />
+      <workItem from="1598923939781" duration="1445000" />
+      <workItem from="1598925584117" duration="1148000" />
+      <workItem from="1598927521837" duration="599000" />
+      <workItem from="1598939187512" duration="730000" />
+      <workItem from="1598941027000" duration="1116000" />
+      <workItem from="1598942876655" duration="1108000" />
+      <workItem from="1598944130593" duration="567000" />
+      <workItem from="1598945496102" duration="3219000" />
+      <workItem from="1599013896751" duration="12313000" />
+      <workItem from="1599184729021" duration="4482000" />
+      <workItem from="1599631848081" duration="45000" />
+      <workItem from="1599632086994" duration="16931000" />
+      <workItem from="1602467520049" duration="691000" />
     </task>
     <servers />
   </component>

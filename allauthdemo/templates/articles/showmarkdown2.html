@@ -7,7 +7,58 @@
 </head>
 <body>
 {% load markdown_deux_tags %}
+{#{% load comments %}#}
+{% load comments i18n %}
 {{ content | markdown  }}
+<!-- Comments Form -->
+<div class="card my-4">
+    <h5 class="card-header">评论</h5>
+    <div class="card-body">
+        {% if user.is_authenticated %}
+            {% get_comment_form for new_article as form %}
+            <form action="{% comment_form_target %}" method="POST" novalidate>
+                {% csrf_token %}
+                <div id="id_comment" class="form-group">
+                    <textarea name="comment" rows="5" maxlength="400" class="textarea form-control"></textarea>
+                </div>
+{#                {{ blog_form.object_pk }}#}
+{#                {{ blog_form.content_type }}#}
+{#                {{ blog_form.timestamp }}#}
+{#                {{ blog_form.site }}#}
+{#                {{ blog_form.submit_date }}#}
+{#                {{ blog_form.security_hash }}#}
 
+                {{ form.comment }}
+                {{ form.honeypot }}
+                {{ form.content_type }}
+                {{ form.object_pk }}
+                {{ form.timestamp }}
+                {{ form.security_hash }}
+{#                                <input type="hidden" name="next" value="{% url 'articles:article' article.slug %}"/>#}
+                <input type="hidden" name="next" value="just test" />
+                <input class="btn btn-info" type="submit" value="提交" id="id_submit"/>
+            </form>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Single Comment -->
+{#                {% get_comment_list for article as comment_list %}#}
+{#                {% for comment in comment_list %}#}
+{#                    <div class="media mb-4">#}
+
+{#                        <div class="media-body">#}
+{#                            <h5 class="mt-0">{{ comment.user.get_profile_name }}</h5>#}
+            {{ comment }}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+
+  <script>
+     $.ajaxSetup({
+        data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+     });
+ </script>
 </body>
 </html>
