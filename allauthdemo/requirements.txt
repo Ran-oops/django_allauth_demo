@@ -15,7 +15,7 @@ oauthlib==3.1.0
 pandas==0.23.4
 Pillow==5.2.0
 pip==20.2.2
-Pygments==2.6.1
+Pygments==2.7.4
 PyMySQL==0.9.3
 six==1.11.0
 urllib3==1.23
