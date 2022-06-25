@@ -18,5 +18,5 @@ pip==21.1
 Pygments==2.6.1
 PyMySQL==0.9.3
 six==1.11.0
-urllib3==1.23
+urllib3==1.26.5
 elasticsearch==2.4.1
